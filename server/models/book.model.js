@@ -1,15 +1,15 @@
 const mongoose = require("mongoose");
 
 const BookSchema = new mongoose.Schema({
-  Name: {
+  name: {
     type: String,
     required: [true, "A book name is required"],
   },
-  Description: {
+  description: {
     type: String,
     required: [true, "A book description is required"]
   },
-  Categories: {
+  categories: {
     type: String,
     required: [true, "A book genre is required"],
     enum: [
@@ -20,11 +20,11 @@ const BookSchema = new mongoose.Schema({
       "Romance"
     ]
   },
-  Image:{
+  image:{
     type: String,
     required: [true, "A book picture is required"]
   },
-  Rating: {
+  rating: {
     type: Number,
     min: [0, "0 is the minimum number"],
     max: [5, "5 is the maximum number"]

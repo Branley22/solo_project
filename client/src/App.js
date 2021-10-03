@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import {Router} from '@reach/router';
+import Header from './components/Header';
+import AllBooks from './components/AllBooks';
+import CreateBook from './components/CreateBook';
+import OneBook from './components/OneBook';
 import './App.css';
+import UpdateBook from './components/UpdateBook';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Router>
+        <AllBooks default path='/books'/>
+        <CreateBook path='/books/new'/>
+        <OneBook path='/books/:id'/>
+        <UpdateBook path='/books/edit/:id'/>
+      </Router>
     </div>
   );
 }
