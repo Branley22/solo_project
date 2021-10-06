@@ -4,7 +4,7 @@ import {Link, navigate} from '@reach/router';
 
 const Form = (props)=>{
 
-  const {submitHandler, buttonText, book, setBook} = props;
+  const {submitHandler, buttonText, book, setBook, errors} = props;
 
 
   const newChangeHandler = (e)=>{
@@ -24,11 +24,21 @@ const Form = (props)=>{
         <div>
           <label htmlFor="">Name</label>
           <input onChange={newChangeHandler} name="name" type="text" value={book.name}/>
+          {
+            errors.name?
+            <span style={{color:"red"}}>{errors.name.message}</span>
+            :null
+          }
         </div>
 
         <div>
           <label htmlFor="">Description</label>
           <input onChange={newChangeHandler} name="description" type="textbox" value={book.description}/>
+          {
+            errors.description?
+            <span style={{color:"red"}}>{errors.description.message}</span>
+            :null
+          }
         </div>
 
         <div>
@@ -43,16 +53,31 @@ const Form = (props)=>{
             <option value = "Self-Help">Self-Help</option>
             <option value = "Romance">Romance</option>
           </select>
+          {
+            errors.categories?
+            <span style={{color:"red"}}>{errors.categories.message}</span>
+            :null
+          }
         </div>
 
         <div>
           <label htmlFor="">Image</label>
           <input onChange={newChangeHandler} name="image" type="text" value={book.image}/>
+          {
+            errors.image?
+            <span style={{color:"red"}}>{errors.image.message}</span>
+            :null
+          }
         </div>
 
         <div>
           <label htmlFor="">Rating</label>
           <input onChange={newChangeHandler} name="rating" type="text" value={book.rating}/>
+          {
+            errors.rating?
+            <span style={{color:"red"}}>{errors.rating.message}</span>
+            :null
+          }
         </div>
         
         <button>{buttonText}</button>

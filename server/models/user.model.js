@@ -25,18 +25,19 @@ UserSchema.pre("validate", function(next){
   console.log("in validate");
 
   if(this.password !== this.confirmPassword){
-    this.invalidate("confirmPassword", "Password must match")
-  }
+    this.invalidate("confirmPassword", "Passwords must match")
     console.log("didn't match");
+  }
+    console.log(this.password, this.confirmPassword);
     next();
 })
 
 UserSchema.pre("save", function(next){
   console.log("in pre save");
   bcrypt.hash(this.password, 10)
-  .then((hashPassword)=>{
+  .then((hashedPassword)=>{
     console.log("in hash");
-    this.password = hashPassword;
+    this.password = hashedPassword;
     next();
   })
 });

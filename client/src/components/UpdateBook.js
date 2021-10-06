@@ -5,6 +5,7 @@ import Form from '../components/Form';
 
 const UpdateBook = (props)=>{
 
+  const [errors,setErrors] = useState({});
   const [updateBook, setUpdateBook] = useState({
     name:"",
     description:"",
@@ -34,6 +35,11 @@ const UpdateBook = (props)=>{
       console.log(res.data);
       navigate("/books")
     })
+    .catch((err)=>{
+      console.log(err);
+      console.log(err.response.data.errors);
+      setErrors(err.response.data.errors)
+    })
   }
 
 
@@ -43,7 +49,8 @@ const UpdateBook = (props)=>{
     <div>
       <Form submitHandler={updateBookHandler}
       buttonText="Update Book"
-      book={updateBook} setBook={setUpdateBook}/>
+      book={updateBook} setBook={setUpdateBook}
+      errors={errors}/>
     </div>
   )
 }

@@ -35,6 +35,7 @@ const AllBooks = (props)=>{
               <Link to={`/books/edit/${book._id}`}>
                 Edit
               </Link>
+              <Link to={`/users/profile/${book.user_id?._id}`}><p>Added by:{book.user_id?.username}</p></Link>
               <DeleteBook bookList={bookList} setBookList={setBookList} id={book._id}/>
             </div>
           ))

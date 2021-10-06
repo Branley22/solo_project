@@ -24,7 +24,7 @@ module.exports = {
       res.status(400).json(err);
     })
   },
-  login:(req,res)=>{
+  login: (req, res)=>{
     User.findOne({email: req.body.email})
     .then((userRecord)=>{
       if(userRecord === null){
@@ -37,10 +37,10 @@ module.exports = {
             console.log("Password is valid");
 
             res.cookie("usertoken",
-
               jwt.sign({
                 user_id: userRecord._id,
-                email: userRecord.email
+                email: userRecord.email,
+                username: userRecord.username
               },
               process.env.JWT_SECRET),
 
@@ -51,7 +51,8 @@ module.exports = {
             )
             .json({
               message: "Successfully logged in",
-              userLoggedIn: userRecord.username
+              userLoggedIn: userRecord.username,
+              userId: userRecord._id
             })
           }
           else{
@@ -74,6 +75,17 @@ module.exports = {
     res.clearCookie("usertoken");
     res.json({
       message: "You have successfully logged out"
+    })
+  },
+  getOneUser:(req,res)=>{
+    User.findOne({_id: req.params.id})
+    .then((oneUser)=>{
+      console.log(oneUser);
+      res.json(oneUser);
+    })
+    .catch((err)=>{
+      console.log(err);
+      res.status(400).json(err);
     })
   }
 }

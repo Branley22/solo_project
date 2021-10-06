@@ -5,6 +5,7 @@ import Form from '../components/Form';
 
 const CreateBook = (props)=>{
 
+  const [errors, setErrors] = useState({});
   const [newBook, setNewBook] = useState({
     name:"",
     description:"",
@@ -16,12 +17,26 @@ const CreateBook = (props)=>{
   const newSubmitHandler = (e)=>{
     e.preventDefault();
     axios.post('http://localhost:8000/api/books',
-    newBook
+    newBook,
+    {
+      withCredentials: true
+    }
     )
     .then((res)=>{
       console.log(res);
       console.log(res.data);
       navigate("/books")
+    })
+    .catch((err)=>{
+      console.log(err);
+      console.log(err.response.data.errors);
+      // setErrs(err.response.data.errors);
+      if(err.response.status === 401){
+        navigate("/");
+      }
+      if(err.response.data.errors){
+        setErrors(err.response.data.errors)
+      }
     })
   }
 
@@ -31,7 +46,8 @@ const CreateBook = (props)=>{
     <div>
       <Form submitHandler={newSubmitHandler}
       buttonText="Add New Book"
-      book={newBook} setBook={setNewBook}/>
+      book={newBook} setBook={setNewBook}
+      errors={errors}/>
     </div>
   )
 }

@@ -28,6 +28,13 @@ const BookSchema = new mongoose.Schema({
     type: Number,
     min: [0, "0 is the minimum number"],
     max: [5, "5 is the maximum number"]
+  },
+  user_id:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref:"User"
+  },
+  createdByUserName:{
+    type:String
   }
 }, {timestamps: true})
 
