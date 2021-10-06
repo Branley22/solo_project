@@ -44,6 +44,7 @@ const CreateBook = (props)=>{
 
   return(
     <div>
+      <h1>New Book</h1>
       <Form submitHandler={newSubmitHandler}
       buttonText="Add New Book"
       book={newBook} setBook={setNewBook}

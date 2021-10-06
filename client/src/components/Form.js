@@ -33,7 +33,7 @@ const Form = (props)=>{
 
         <div>
           <label htmlFor="">Description</label>
-          <input onChange={newChangeHandler} name="description" type="textbox" value={book.description}/>
+          <input style={{height:"200px", width:"350px"}} onChange={newChangeHandler} name="description" type="textbox" value={book.description}/>
           {
             errors.description?
             <span style={{color:"red"}}>{errors.description.message}</span>

@@ -20,17 +20,36 @@ const AllBooks = (props)=>{
 
   return(
     <div>
-      <h1>The Book Collection</h1>
-      <div>
+      <h1 style={{marginTop:"10px, marginBottom:20px", paddingLeft:"20px", fontSize:"25px"}}>
+        Good Reads</h1>
+      <div className="allbook-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+        </table>
         {
           bookList.map((book, index)=>(
             <div key={index}>
+              <table>
+                <thead>
+                  <tr>
+                    {/* <td>{book.image}</td> */}
+                    <td>{book.name}</td>
+                  </tr>
+                </thead>
+              </table>
               <Link to={`/books/${book._id}`}>
-                <p>{book.name}</p>
+                details
+                {/* { <p>{book.name}</p>
                 <p>{book.description}</p>
-                <p>{book.categories}</p>
+                <p>{book.categories}</p> */}
                 <img src={book.image} alt="book image" style={{width:"150px", height:"150px"}}/>
-                <p>{book.rating}</p>
+                 {/* <p>{book.rating}</p> } */}
               </Link>
               <Link to={`/books/edit/${book._id}`}>
                 Edit

@@ -21,12 +21,17 @@ const OneBook = (props)=>{
 
 
   return(
-    <div>
-      <p>{OneBook.name}</p>
-      <p>{OneBook.description}</p>
-      <p>{OneBook.categories}</p>
-      <img src={OneBook.image} alt="image" style={{width:"150px", height:"150px"}}/>
-      <p>{OneBook.rating}</p>
+    <div className="one-book">
+      <h2 style={{paddingBottom:"20px"}}>{OneBook.name}</h2>
+      {/* <p>{OneBook.description}</p> */}
+      {/* <p>{OneBook.categories}</p> */}
+      <div className="align-one-book">
+      <img className="one-book-img" src={OneBook.image} alt="image"/>
+      {/* <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between"}}> */}
+      <p className="one-book_description">{OneBook.description}</p>
+      </div>
+      {/* <p>{OneBook.rating}</p> */}
+      {/* </div> */}
       <DeleteBook id={OneBook._id}/>
     </div>
   )
