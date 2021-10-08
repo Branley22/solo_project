@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import { navigate } from '@reach/router';
+import { Link, navigate } from '@reach/router';
+import Register from './Register';
 
 const Login = (props)=>{
 
@@ -27,6 +28,7 @@ const Login = (props)=>{
       localStorage.setItem("userId", res.data.userId);
       setReloadBoolean(!reloadBoolean);
       navigate("/books");
+      // navigate("/");
     })
     .catch((err) =>{
       console.log(err.response);
@@ -34,20 +36,29 @@ const Login = (props)=>{
     });
   }
   return(
-    <div>
-      <h2>Login</h2>
+    <div className="login-container">
+      <h2 style={{paddingBottom:"10px"}}>Login</h2>
       <p className="error-text">{errorMessage? errorMessage : ""}</p>
       <form onSubmit={login}>
-        <div>
-          <label>Email</label>
+
+        <div style={{marginTop:"50px", marginBottom:"40px"}}>
+          <label style={{marginLeft:"420px"}}>Email Address:</label>
           <input type="text" name="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
         </div>
 
-        <div>
-          <label>Password</label>
+        <div style={{marginBottom:"20px"}}>
+          <label>Password:</label>
           <input type="password" name="password" value={password.password} onChange={(e)=> setPassword(e.target.value)}/>
         </div>
-        <button type="submit">Sign in</button>
+
+        <div style={{justifyContent:"space-evenly", display:"flex"}}>
+            <button className="submitbtn">
+              <Link to="/">
+                Don't have an account?
+              </Link>
+          </button>
+          <button className="submitbtn" type="submit">LOGIN</button>
+        </div>
       </form>
     </div>
   )

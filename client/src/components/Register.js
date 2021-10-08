@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import { Link, navigate } from '@reach/router';
+import Login from '../components/Login';
 
 const Register = (props)=>{
 
@@ -30,11 +32,12 @@ const Register = (props)=>{
     )
     .then((res)=>{
       console.log(res.data);
+      navigate("/login");
       setUser({
         userName:"",
         email:"",
         password:"",
-        confirmPassword:""
+        confirmPassword:"",
       })
       setConfirmReg("Thank you for registering, can login now");
       SetErrors({});
@@ -47,9 +50,11 @@ const Register = (props)=>{
 
 
   return(
-    <div>
-      <h2>Register</h2>
-
+    <div className="login-container">
+      <h2 style={{marginBottom:"10px"}}>Register</h2>
+      <Link to="/login">
+        Back to login
+      </Link>
       <form onSubmit={register}>
         {
           confirmReg?
@@ -57,7 +62,7 @@ const Register = (props)=>{
           :null
         }
         <div>
-          <label>Username</label>
+          <label>Username:</label>
           <input type="text" name="username" value={user.username} onChange={(e)=>handleChange(e)}/>
           {
             Errors.username?
@@ -67,7 +72,7 @@ const Register = (props)=>{
         </div>
 
         <div>
-          <label>Email</label>
+          <label style={{marginLeft:"380px"}}>Email:</label>
           <input type="email" name="email" value={user.email} onChange={(e)=>handleChange(e)}/>
           {
             Errors.email?
@@ -77,7 +82,7 @@ const Register = (props)=>{
         </div>
 
         <div>
-          <label>Password</label>
+          <label>Password:</label>
           <input type="password" name="password" value={user.password} onChange={(e)=>handleChange(e)}/>
           {
             Errors.password?
@@ -87,7 +92,7 @@ const Register = (props)=>{
         </div>
 
         <div>
-          <label>Confirm Password</label>
+          <label style={{marginLeft:"440px"}}>Confirm Password:</label>
           <input type="password" name="confirmPassword" value={user.confirmPassword} onChange={(e)=>handleChange(e)}/>
           {
             Errors.confirmPassword?
@@ -95,7 +100,7 @@ const Register = (props)=>{
             :null
           }
         </div>
-        <button type="submit">Register Me</button>
+        <button className="submitbtn" type="submit">Register Me</button>
       </form>
     </div>
   )

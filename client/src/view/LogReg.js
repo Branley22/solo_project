@@ -7,9 +7,7 @@ const LogReg = (props)=>{
 
 
   return(
-    <div classname="logreg-section">
-      <Login/>
-      <hr/>
+    <div>
       <Register/>
     </div>
   )

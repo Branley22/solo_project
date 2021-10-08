@@ -16,12 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}/>
+      {/* <Header setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}/> */}
       <Router>
         <LogReg path="/"/>
         <Login setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}
         path="/login"/>
-        <AllBooks default/>
+        <AllBooks 
+        default/>
         <CreateBook path='/books/new'/>
         <UserProfile path="/users/profile/:id"/>
         <OneBook path='/books/:id'/>

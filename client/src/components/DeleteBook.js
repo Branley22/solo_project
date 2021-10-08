@@ -19,7 +19,7 @@ const DeleteBook = (props)=>{
       deleteFilter(id);
       }
       else{
-        navigate("/")
+        navigate("/books")
       }
     })
     .catch((err)=>{
@@ -29,7 +29,7 @@ const DeleteBook = (props)=>{
 
   return(
     <div>
-      <button onClick={deleteHandler}>Delete</button>
+      <button className="submitbtn" onClick={deleteHandler}>Check out</button>
     </div>
   )
 }

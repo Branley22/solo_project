@@ -4,6 +4,7 @@ import {Link, navigate} from '@reach/router';
 
 const Header = (props)=>{
 
+  const {headerText, headerPath} = props;
   const [currentUserId, setCurrentUserId] = useState("");
   const {reloadBoolean} = props;
 
@@ -31,15 +32,14 @@ const Header = (props)=>{
 
   return(
     <div>
-      <ul>
-        <li><Link to="/books">All books</Link></li>
-        <li><Link to="/books/new">New book</Link></li>
+      <ul style={{display:"flex", justifyContent:"space-between", marginBottom:"35px"}}>
+        <Link to={headerPath}>{headerText}</Link>
         {
           currentUserId?
           <Link to={`/users/profile/${currentUserId}`}><li> Your Profile</li></Link>
           :null
         }
-        <button onClick={logout}>Logout</button>
+        <button className="logout-link" onClick={logout}>Logout</button>
       </ul>
     </div>
   )
