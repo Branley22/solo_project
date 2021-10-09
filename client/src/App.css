@@ -180,6 +180,10 @@ span {
   margin: 20px;
 }
 
+.one-book-p {
+  color: rgb(209, 209, 209);
+}
+
 .logout-link{
   background-color:rgb(209, 209, 209);
   color: black;
