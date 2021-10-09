@@ -23,7 +23,7 @@ const Form = (props)=>{
       <form onSubmit={submitHandler}>
         
         <div>
-          <label style={{marginLeft:"380px"}} htmlFor="">Name</label>
+          <label htmlFor="">Name:</label>
           <input onChange={newChangeHandler} name="name" type="text" value={book.name}/>
           {
             errors.name?
@@ -33,7 +33,7 @@ const Form = (props)=>{
         </div>
 
         <div>
-          <label htmlFor="">Description</label>
+          <label htmlFor="">Description:</label>
           <input onChange={newChangeHandler} name="description" type="textbox" value={book.description}/>
           {
             errors.description?
@@ -43,7 +43,7 @@ const Form = (props)=>{
         </div>
 
         <div>
-          <label htmlFor="">Categories</label>
+          <label htmlFor="">Categories:</label>
           <select onChange={newChangeHandler} name="categories" value={book.categories}>
             <option value="none" defaultValue hidden>
               Select a category
@@ -62,7 +62,7 @@ const Form = (props)=>{
         </div>
 
         <div>
-          <label style={{marginLeft:"385px"}} htmlFor="">Image</label>
+          <label htmlFor="">Image:</label>
           <input onChange={newChangeHandler} name="image" type="text" value={book.image}/>
           {
             errors.image?
@@ -72,7 +72,7 @@ const Form = (props)=>{
         </div>
 
         <div>
-          <label style={{marginLeft:"385px"}} htmlFor="">Rating</label>
+          <label htmlFor="">Rating:</label>
           <input onChange={newChangeHandler} name="rating" type="text" value={book.rating}/>
           {
             errors.rating?

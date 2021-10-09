@@ -32,8 +32,8 @@ const Header = (props)=>{
 
   return(
     <div>
-      <ul style={{display:"flex", justifyContent:"space-between", marginBottom:"35px"}}>
-        <Link to={headerPath}>{headerText}</Link>
+      <ul className="header-nav">
+      <Link to={headerPath}>{headerText}</Link>
         {
           currentUserId?
           <Link to={`/users/profile/${currentUserId}`}><li> Your Profile</li></Link>

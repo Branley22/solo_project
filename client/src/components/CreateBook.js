@@ -44,8 +44,8 @@ const CreateBook = (props)=>{
 
   return(
     <div className="login-container">
-      <h1 style={{paddingBottom:"30px", textAlign:"left", color:"rgb(119,242,245)", fontStyle:"italic"}}>Good Reads</h1>
-      <h1 style={{color:"rgb(119,242,245)", fontSize:"25px", paddingBottom:"15px"}}>New Book</h1>
+      <h1 className="userProfile-header">Good Reads</h1>
+      <h1 className="userProfile-title">New Book</h1>
       <Form submitHandler={newSubmitHandler}
       buttonText="Add New Book"
       book={newBook} setBook={setNewBook}

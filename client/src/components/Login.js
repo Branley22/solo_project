@@ -37,27 +37,27 @@ const Login = (props)=>{
   }
   return(
     <div className="login-container">
-      <h2 style={{paddingBottom:"10px"}}>Login</h2>
+      <h2>Login</h2>
       <p className="error-text">{errorMessage? errorMessage : ""}</p>
       <form onSubmit={login}>
 
-        <div style={{marginTop:"50px", marginBottom:"40px"}}>
-          <label style={{marginLeft:"420px"}}>Email Address:</label>
+        <div>
+          <label>Email Address:</label>
           <input type="text" name="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
         </div>
 
-        <div style={{marginBottom:"20px"}}>
+        <div>
           <label>Password:</label>
           <input type="password" name="password" value={password.password} onChange={(e)=> setPassword(e.target.value)}/>
         </div>
 
-        <div style={{justifyContent:"space-evenly", display:"flex"}}>
+        <div className="login-footer">
             <button className="submitbtn">
               <Link to="/">
                 Don't have an account?
               </Link>
-          </button>
-          <button className="submitbtn" type="submit">LOGIN</button>
+            </button>
+            <button className="submitbtn" type="submit">LOGIN</button>
         </div>
       </form>
     </div>

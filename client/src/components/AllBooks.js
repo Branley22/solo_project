@@ -25,12 +25,17 @@ const AllBooks = (props)=>{
   return(
     <div>
       <div className="allbook-container">
-        <div style={{display:"flex", justifyContent:"space-between", backgroundColor:"rgb(56, 72, 91)", paddingTop:"10px", marginLeft:"50px"}}>
+        <div className="allbooks-header">
           <h1 className="allbooks-title">Good Reads</h1>
           <Header headerText="" headerPath={`/users/profile/${currentUserId}`}/>
         </div>
-        <p style={{textAlign:"right", paddingRight:"60px"}}><Link to={`/books/new/`}>Add new book</Link></p>
-        <table style={{marginTop:"40px"}}>
+        <p style={{textAlign:"right", marginBottom:"40px"}}>
+          <Link to={`/books/new/`}>
+            Add new book
+          </Link>
+        </p>
+
+        <table>
           <thead>
             <tr>
               <th>Image</th>
@@ -40,6 +45,7 @@ const AllBooks = (props)=>{
             </tr>
           </thead>
         </table>
+        
         {
           bookList.map((book, index)=>(
             <div key={index}>
@@ -49,15 +55,15 @@ const AllBooks = (props)=>{
                     <td><img src={book.image} alt="book image" style={{width:"150px", height:"150px"}}/></td>  
                     <td>{book.name}</td>
                     <td>
-                    <Link to={`/users/profile/${book.user_id?._id}`}><p>Added by:{book.user_id?.username}</p></Link>
+                      <Link to={`/users/profile/${book.user_id?._id}`}><p>Added by:{book.user_id?.username}</p></Link>
                     </td>
                     <td>
-                    <Link to={`/books/${book._id}`}>
-                      details
-                    </Link> |
-                    <Link to={`/books/edit/${book._id}`}>
-                      edit
-                    </Link>
+                      <Link to={`/books/${book._id}`}>
+                        details
+                      </Link> |
+                      <Link to={`/books/edit/${book._id}`}>
+                        edit
+                      </Link>
                     </td>
                   </tr>
                 </thead>

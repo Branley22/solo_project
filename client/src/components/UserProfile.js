@@ -34,10 +34,11 @@ const UserProfile = (props)=>{
 
   return(
     <div className="login-container">
-      <h1 style={{paddingBottom:"30px", textAlign:"left", color:"rgb(119,242,245)", fontStyle:"italic"}}>Good Reads</h1>
-      <Header headerText="Go back" headerPath={`/books`}/>
-      <h1 style={{color:"rgb(119,242,245)", fontSize:"25px"}}>Welcome to {userPage.username}'s Profile!</h1>
-      <table style={{marginTop:"40px"}}>
+      <h1 className="userProfile-header">Good Reads</h1>
+        <Header headerText="Go back" headerPath={`/books`}/>
+      <h1 className="userProfile-title">Welcome to {userPage.username}'s Profile!</h1>
+
+      <table>
         <thead>
           <tr>
             <th>Image</th>
@@ -48,19 +49,19 @@ const UserProfile = (props)=>{
           </tr>
         </thead>
       </table>
+      
       {
         userBookList.map((book, index)=>(
           <div key ={index}>
             <table>
               <thead>
-                <td><img src={book.image} style={{width:"150px", height:"150px"}}/></td>
+                <td><img src={book.image} className="small-img"/></td>
                 <td>{book.name}</td>
                 <td>{book.description}</td>
                 <td>{book.categories}</td>
                 <td>{book.rating}</td>
               </thead>
             </table>
-          {/* <p>{book.name}</p> */}
           </div>
         ))
       }

@@ -23,31 +23,23 @@ const OneBook = (props)=>{
 
   return(
     <div className="login-container">
+      <h1 className="userProfile-header">Good Reads</h1>
+        <Header headerText="Go back" headerPath={`/books`}/>
       <div>
-      <h1 style={{paddingBottom:"30px", textAlign:"left", color:"rgb(119,242,245)", fontStyle:"italic"}}>Good Reads</h1>
-      </div>
-      <Header headerText="Go back" headerPath={`/books`}/>
-      <div>
-        <h2 style={{color:"rgb(119,242,245)"}}>
-          <span style={{color:"rgb(209,209,209)", marginRight:"10px"}}>
+        <h2>
+          <span>
             Book Name:
-          </span>{OneBook.name}
-          </h2>
-        {/* <Header headerText="Go back" headerPath={`/books`}/> */}
+          </span>
+          {OneBook.name}
+        </h2>
       </div>
         <div className="one-book">
-          <img style={{width:"350px", height:"350px", border:"5px solid black"}} src={OneBook.image} alt="image"/>
-          <h2 style={{color:"rgb(209, 209, 209)", marginBottom:"10px"}}>Description:</h2>
-          <p style={{color:"rgb(209, 209, 209)", marginBottom:"15px"}}className="one-book_description">{OneBook.description}</p>
-          <DeleteBook id={OneBook._id}/>
+          <img src={OneBook.image} alt="image" className="lg-img"/>
+          <h3>Description:</h3>
+            <p style={{color:"rgb(209, 209, 209)"}}>{OneBook.description}</p>
+            <DeleteBook id={OneBook._id}/>
         </div>
-        {/* <DeleteBook id={OneBook._id}/> */}
       </div>
   )
 }
 export default OneBook;
-
-
-{/* <p>{OneBook.description}</p> */}
-{/* <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between"}}> */}
-{/* <p>{OneBook.rating}</p> */}
