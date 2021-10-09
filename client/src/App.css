@@ -128,8 +128,6 @@ th, td{
   display: flex;
   justify-content: space-between;
   background-color: rgb(56, 72, 91);
-  /* padding-top: 10px; */
-  /* margin-left: 50px; */
 }
 
 .allbooks-title{
