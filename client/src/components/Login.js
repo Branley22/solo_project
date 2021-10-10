@@ -43,7 +43,11 @@ const Login = (props)=>{
 
         <div>
           <label>Email Address:</label>
-          <input type="text" name="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+          <input 
+            type="text" 
+            name="email" 
+            value={email} onChange={(e)=> setEmail(e.target.value)}
+            placeholder="Example@gmail.com"/>
         </div>
 
         <div>
@@ -52,7 +56,7 @@ const Login = (props)=>{
         </div>
 
         <div className="login-footer">
-            <button className="submitbtn">
+              <button className="submitbtn">
               <Link to="/">
                 Don't have an account?
               </Link>

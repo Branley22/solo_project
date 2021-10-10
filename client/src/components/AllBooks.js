@@ -29,14 +29,14 @@ const AllBooks = (props)=>{
           <h1 className="allbooks-title">Good Reads</h1>
           <Header headerText="" headerPath={`/users/profile/${currentUserId}`}/>
         </div>
-        <p style={{textAlign:"right", marginBottom:"40px"}}>
+        <p className="add-new-book-p">
           <Link to={`/books/new/`}>
             Add new book
           </Link>
         </p>
 
         <table>
-          <thead>
+          <thead className="allbook-table">
             <tr>
               <th>Image</th>
               <th>Name</th>
@@ -49,7 +49,7 @@ const AllBooks = (props)=>{
         {
           bookList.map((book, index)=>(
             <div key={index}>
-              <table>
+              <table className="allbook-table">
                 <thead>
                   <tr>
                     <td><img src={book.image} alt="book image" className="small-img"/></td>  

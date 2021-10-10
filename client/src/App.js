@@ -1,6 +1,6 @@
+import './App.css';
 import React, {useState} from 'react';
 import {Router} from '@reach/router';
-import './App.css';
 import Header from './components/Header';
 import AllBooks from './components/AllBooks';
 import CreateBook from './components/CreateBook';
@@ -16,7 +16,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}/> */}
       <Router>
         <LogReg path="/"/>
         <Login setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}

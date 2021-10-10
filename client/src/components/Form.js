@@ -19,7 +19,7 @@ const Form = (props)=>{
 
 
   return(
-    <div>
+    <div className="editbook">
       <form onSubmit={submitHandler}>
         
         <div>
