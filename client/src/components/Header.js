@@ -36,7 +36,7 @@ const Header = (props)=>{
         <Link to={headerPath}>{headerText}</Link>
         {
           currentUserId?
-          <Link to={`/users/profile/${currentUserId}`}><li> Your Profile</li></Link>
+          <Link to={`/users/profile/${currentUserId}`}><li style={{color:"white", fontWeight:"bold"}}> Your Profile</li></Link>
           :null
         }
         <button className="logout-link" onClick={logout}>Logout</button>

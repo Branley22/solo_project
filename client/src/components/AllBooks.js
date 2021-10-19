@@ -30,7 +30,7 @@ const AllBooks = (props)=>{
           <Header headerText="" headerPath={`/users/profile/${currentUserId}`}/>
         </div>
         <p className="add-new-book-p">
-          <Link to={`/books/new/`}>
+          <Link to={`/books/new/`} style={{color:"white", fontWeight:"bold"}}>
             Add new book
           </Link>
         </p>
@@ -56,13 +56,13 @@ const AllBooks = (props)=>{
                       <img src={book.image} alt="book image" className="small-img"/></td>
                     <td>{book.name}</td>
                     <td>
-                      <Link to={`/users/profile/${book.user_id?._id}`}><p>Added by:{book.user_id?.username}</p></Link>
+                      <Link to={`/users/profile/${book.user_id?._id}`}><p style={{color:"white"}}>Added by:{book.user_id?.username}</p></Link>
                     </td>
                     <td>
-                      <Link to={`/books/${book._id}`}>
+                      <Link to={`/books/${book._id}`} style={{color:"white"}}>
                         details
                       </Link> |
-                      <Link to={`/books/edit/${book._id}`}>
+                      <Link to={`/books/edit/${book._id}`} style={{color:"white"}}>
                         edit
                       </Link>
                     </td>

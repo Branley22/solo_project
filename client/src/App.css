@@ -12,8 +12,10 @@ label {
   display: block;
   width: 200px;
   margin: 20px auto;
-  font-size: 22px;
-  color: rgb(209, 209, 209);
+  font-size: 20px;
+  /* color: rgb(209, 209, 209); */
+  color:aliceblue;
+  font-weight: bold;
   text-align: left;
 }
 
@@ -22,11 +24,10 @@ input {
   height: 30px;
   text-align: left;
   border: 2px solid black;
-  border-top-color: rgb(56, 72, 91);
-  border-right-color: rgb(56, 72, 91);
-  border-left-color: rgb(56, 72, 91);
-  border-bottom-color: rgb(119,242,245);
-  background: transparent;
+  border-top-color: rgb(225, 198, 153);
+  border-right-color: rgb(225, 198, 153);
+  border-left-color: rgb(225, 198, 153);
+  border-bottom-color: rgb(56, 72, 91);
 }
 
 select{
@@ -50,8 +51,16 @@ a:hover{
 
 h2{
   font-size: 35px;
-  color: rgb(119,242,245);
+  /* color: rgb(119,242,245); */
+  color: white;
+  border: 3px solid whitesmoke;
+  opacity: .80;
+  width: 280px;
+  font-weight: 900;
   padding-bottom: 10px;
+  position: relative;
+  font-weight: bolder;
+  text-align: center;
 }
 
 h3{
@@ -67,9 +76,10 @@ li{
 
 .login-container{
   background-color:rgb(56, 72, 91);
-  height: fit-content;
+  height: 970px;
   padding: 80px;
   text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1290&q=80");
   }
 
   .login-footer{
@@ -95,22 +105,24 @@ li{
 
   .allbook-container {
     padding: 29px;
-    background-color: rgb(56, 72, 91);
-    height: 970px;
+    /* background-color: rgb(225, 198, 153); */
+    background: linear-gradient(rgb(228, 189, 123), rgb(184, 161, 122));
+    height: fit-content;
     text-align: center;
   }
 
   .allbooks-header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(56, 72, 91);
+    background: transparent;
   }
 
   .allbooks-title{
-    color: rgb(119,242,245);
+    color: white;
     margin-top: 70px;
     font-style: italic;
     padding-left: 20px;
+    font-weight: bold;
   }
 
   .add-new-book-p {
@@ -129,12 +141,12 @@ li{
     text-align: center;
     width: 100%;
     height:130%;
-    color: rgb(209, 209, 209);
+    color: white;
     font-size: 17px;
   }
 
   td { 
-    background: #333; 
+    background: rgba(122, 103, 66, 0.534); 
     color: white; 
     font-weight: bold; 
     padding: 3px;
@@ -143,7 +155,7 @@ li{
   th, td{
     width: 20%;
     text-align: center;
-    border: 1px solid rgb(119,242,245);
+    border: 1px solid black;
   }
 
   .userProfile-header{
@@ -200,11 +212,12 @@ li{
   .submitbtn{
     background-color:rgb(56, 72, 91);
     color: rgb(209, 209, 209);
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     border-style: none;
     text-align: left;
-    align-items: left;
+    /* align-items: left; */
+    margin-top: 10px;
     cursor: pointer;
     transition: 0.5s;
     font-size: 15px;
@@ -213,17 +226,46 @@ li{
   .submitbtn:hover{
     background-color:rgb(119,242,245);
     color: black;
-    margin-top: 20px;
-    padding: 15px;
+    /* margin-top: 13px; */
+    padding: 10px;
+  }
+
+  .login-form{
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    /* margin-left: 40px; */
+    background-color: rgb(225, 198, 153);
+    opacity: .86;
+    width: 280px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .register-form{
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    /* margin-left: 40px; */
+    background-color: rgb(225, 198, 153);
+    opacity: .86;
+    width: 280px;
+    height: 480px;
+    border-radius: 10px;
+    padding: 5px;
   }
 
   form{
     text-align: center;
-    border: 4px solid rgb(119,242,245);
     margin-top: 40px;
-
+    /* margin-left: 40px; */
+    /* background-color: rgb(225, 198, 153); */
+    height: 300px;
+    border-radius: 10px;
+    padding: 5px
   }
-  @media screen and (min-width: 512px) and (max-width: 768px) {
+  /* @media screen and (min-width: 512px) and (max-width: 768px) {
 
     .allbook-container {
       padding: 29px;
@@ -296,4 +338,4 @@ li{
             border: 1px solid rgb(119,242,245);
           }
       }
-  }
+  } */

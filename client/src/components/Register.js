@@ -52,12 +52,12 @@ const Register = (props)=>{
   return(
     <div className="login-container">
       <h2>Register</h2>
-        <p>
-          <Link to="/login">
+        <h4>
+          <Link to="/login" style={{color:"white", fontWeight:"bold", opacity:".80"}}>
             Back to login
           </Link>
-        </p>
-      <form onSubmit={register}>
+        </h4>
+      <form onSubmit={register} className="register-form">
         {
           confirmReg?
           <h1 style={{color:"grey"}}>{confirmReg}</h1>
