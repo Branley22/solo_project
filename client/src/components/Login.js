@@ -43,7 +43,7 @@ const Login = (props)=>{
 
         <div>
           <label>Email Address:</label>
-          <input 
+          <input
             type="text" 
             name="email" 
             value={email} onChange={(e)=> setEmail(e.target.value)}
@@ -52,7 +52,10 @@ const Login = (props)=>{
 
         <div>
           <label>Password:</label>
-          <input type="password" name="password" value={password.password} onChange={(e)=> setPassword(e.target.value)}/>
+          <input
+          type="password" 
+          name="password" 
+          value={password.password} onChange={(e)=> setPassword(e.target.value)}/>
         </div>
 
         <div className="login-footer">
@@ -61,7 +64,9 @@ const Login = (props)=>{
                 Don't have an account?
               </Link>
             </button>
-            <button className="submitbtn" type="submit">LOGIN</button>
+            <button className="submitbtn"
+            type="submit">
+              LOGIN</button>
         </div>
       </form>
     </div>

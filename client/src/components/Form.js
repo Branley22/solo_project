@@ -64,6 +64,7 @@ const Form = (props)=>{
         <div>
           <label htmlFor="">Image:</label>
           <input onChange={newChangeHandler} name="image" type="text" value={book.image}/>
+
           {
             errors.image?
             <span style={{color:"red"}}>{errors.image.message}</span>

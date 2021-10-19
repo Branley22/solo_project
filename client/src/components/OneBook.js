@@ -37,6 +37,7 @@ const OneBook = (props)=>{
           <img src={OneBook.image} alt="image" className="lg-img"/>
           <h3>Description:</h3>
             <p className="one-book-p">{OneBook.description}</p>
+            <p className="one-book-p">{OneBook.rating}</p>
             <DeleteBook id={OneBook._id}/>
         </div>
       </div>

@@ -16,18 +16,18 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <LogReg path="/"/>
-        <Login setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}
-        path="/login"/>
-        <AllBooks 
-        default/>
-        <CreateBook path='/books/new'/>
-        <UserProfile path="/users/profile/:id"/>
-        <OneBook path='/books/:id'/>
-        <UpdateBook path='/books/edit/:id'/>
-      </Router>
-    </div>
+        <Router>
+          <LogReg path="/"/>
+          <Login setReloadBoolean={setReloadBoolean} reloadBoolean={reloadBoolean}
+          path="/login"/>
+          <AllBooks 
+          default/>
+          <CreateBook path='/books/new'/>
+          <UserProfile path="/users/profile/:id"/>
+          <OneBook path='/books/:id'/>
+          <UpdateBook path='/books/edit/:id'/>
+        </Router>
+        </div>
   );
 }
 

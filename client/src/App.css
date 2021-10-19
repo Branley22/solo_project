@@ -3,202 +3,10 @@
   padding: 0px;
 }
 
-/* .App {
-  text-align: center;
-  height: 100px;
+.App{
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
 }
-
-a {
-  text-decoration: none;
-  color:rgb(209, 209, 209);
-}
-
-h2{
-  font-size: 35px;
-  color: rgb(119,242,245);
-  padding-bottom: 10px;
-}
-
-h3{
-  font-size: 30px;
-  padding: 10px;
-  color:rgb(209, 209, 209);
-}
-
-a:hover{
-  color: rgb(0, 0, 0);
-  transition: 0.5s;
-}
-
-li{
-  list-style: none;
-}
-
-.small-img{
-  width: 120px;
-  height: 120px;
-}
-
-.lg-img{
-  width: 350px;
-  height: 350px;
-  border: 3px solid black;
-  border-radius: 5px;
-}
-
-label {
-  display: block;
-  width: 200px;
-  margin: 20px auto;
-  font-size: 22px;
-  color: rgb(209, 209, 209);
-}
-
-input {
-  width: 350px;
-  height: 30px;
-  text-align: left;
-  border: 2px solid black;
-  border-top-color: rgb(56, 72, 91);
-  border-right-color: rgb(56, 72, 91);
-  border-left-color: rgb(56, 72, 91);
-  border-bottom-color: rgb(119,242,245);
-  background: transparent;
-}
-
-select{
-  width: 350px;
-  height: 30px;
-  border: 2px solid black;
-  background-color: (56, 72, 91);
-  background: transparent;
-  border: 2px solid rgb(119,242,245);
-}
-
-form{
-  text-align: center;
-  border: 4px solid rgb(119,242,245);
-  margin-top: 40px;
-}
-
-.login-container{
-background-color:rgb(56, 72, 91);
-height: 970px;
-padding: 80px;
-margin: 0px
-}
-
-.header-nav{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
-}
-
-.login-footer{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-table {
-  border-collapse: collapse;
-  text-align: center;
-  width: 90%;
-  margin: auto;
-  color: rgb(209, 209, 209);
-}
-
-th, td{
-  width: 200px;
-  padding: 5px;
-  border: .5px solid black;
-  text-align: center;
-  border: 1px solid rgb(119,242,245);
-}
-
-.errors-text{
-  color:red;
-}
-
-.allbook-container {
-  padding: 29px;
-  background-color: rgb(56, 72, 91);
-}
-
-.allbooks-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(56, 72, 91);
-}
-
-.allbooks-title{
-  color: rgb(119,242,245);
-  margin-top: 70px;
-  font-style: italic;
-  padding-left: 20px;
-}
-
-.userProfile-header{
-  text-align: left;
-  color: rgb(119,242,245);
-  padding-bottom: 30px;
-  font-style: italic;
-}
-
-.userProfile-title {
-  color: rgb(119,242,245);
-  font-size: 25px;
-  padding-bottom: 20px;
-  text-decoration: underline;
-}
-
-span {
-  color: rgb(209,209,209);
-  margin-right: 10px;
-}
-
-.submitbtn{
-  background-color:rgb(56, 72, 91);
-  color: rgb(209, 209, 209);
-  padding: 10px;
-  border-radius: 10px;
-  border-style: none;
-  text-align: left;
-  align-items: left;
-  cursor: pointer;
-  transition: 0.5s;
-  font-size: 15px;
-}
-
-.submitbtn:hover{
-  background-color:rgb(119,242,245);
-  color: black;
-  margin-top: 20px;
-  padding: 15px;
-}
-
-.one-book{
-  margin: 20px;
-}
-
-.one-book-p {
-  color: rgb(209, 209, 209);
-}
-
-.logout-link{
-  background-color:rgb(209, 209, 209);
-  color: black;
-  font-size: 15px;
-  border-radius: 5px;
-  padding: 2px;
-  cursor: pointer;
-  margin-bottom: 30px;
-  padding: 2px;
-}
-
-.logout-link:hover{
-  background-color: rgb(119,242,245);
-  border-style: none;
-} */
 
 label {
   display: block;
@@ -321,8 +129,6 @@ li{
     text-align: center;
     width: 100%;
     height:130%;
-    /* margin: auto; */
-    /* padding: 100px; */
     color: rgb(209, 209, 209);
     font-size: 17px;
   }
@@ -336,8 +142,6 @@ li{
   
   th, td{
     width: 20%;
-    /* text-align: left; */
-    /* border: .5px solid black; */
     text-align: center;
     border: 1px solid rgb(119,242,245);
   }
@@ -361,8 +165,6 @@ li{
     border-collapse: fixed;
     text-align: center;
     width: 100%;
-    /* margin: auto; */
-    /* padding: 100px; */
     color: rgb(209, 209, 209);
     font-size: 15px;
   }
@@ -432,8 +234,6 @@ li{
 
     th, td{
       width: 15%;
-      /* text-align: left; */
-      /* border: .5px solid black; */
       text-align: center;
       border: 1px solid rgb(119,242,245);
     }
@@ -463,8 +263,6 @@ li{
 
       th, td{
         width: 10%;
-        /* text-align: left; */
-        /* border: .5px solid black; */
         text-align: center;
         border: 1px solid rgb(119,242,245);
       }
@@ -477,6 +275,13 @@ li{
       }
 
       @media screen and (min-width: 1024px) {
+        
+        .allbook-container {
+          padding: 29px;
+          background-color: rgb(56, 72, 91);
+          height: 970px;
+          text-align: center;
+        }
 
         .login-container{
           background-color:rgb(56, 72, 91);
@@ -487,8 +292,6 @@ li{
 
           th, td{
             width: 5%;
-            /* text-align: left; */
-            /* border: .5px solid black; */
             text-align: center;
             border: 1px solid rgb(119,242,245);
           }

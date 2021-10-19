@@ -52,7 +52,8 @@ const AllBooks = (props)=>{
               <table className="allbook-table">
                 <thead>
                   <tr>
-                    <td><img src={book.image} alt="book image" className="small-img"/></td>  
+                    <td>
+                      <img src={book.image} alt="book image" className="small-img"/></td>
                     <td>{book.name}</td>
                     <td>
                       <Link to={`/users/profile/${book.user_id?._id}`}><p>Added by:{book.user_id?.username}</p></Link>
