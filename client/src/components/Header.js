@@ -33,7 +33,7 @@ const Header = (props)=>{
   return(
     <div>
       <ul className="header-nav">
-        <Link to={headerPath}>{headerText}</Link>
+        <Link style={{color:"white", fontStyle:"900"}} to={headerPath}>{headerText}</Link>
         {
           currentUserId?
           <Link to={`/users/profile/${currentUserId}`}><li style={{color:"white", fontWeight:"bold"}}> Your Profile</li></Link>

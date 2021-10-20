@@ -90,7 +90,8 @@ li{
   .logout-link{
     background-color:rgb(209, 209, 209);
     color: black;
-    font-size: 15px;
+    background-color: rgba(122, 103, 66, 0.534);
+    font-size: 13px;
     border-radius: 5px;
     padding: 2px;
     cursor: pointer;
@@ -104,11 +105,28 @@ li{
   }
 
   .allbook-container {
-    padding: 29px;
+    padding: 15px;
     /* background-color: rgb(225, 198, 153); */
     background: linear-gradient(rgb(228, 189, 123), rgb(184, 161, 122));
     height: fit-content;
     text-align: center;
+  }
+
+  .userP-container {
+    padding: 15px;
+    /* background-color: rgb(225, 198, 153); */
+    background: linear-gradient(rgb(228, 189, 123), rgb(184, 161, 122));
+    height: fit-content;
+    text-align: center;
+    table-layout: fixed;
+  }
+
+  .userP-container td{
+    overflow-wrap: break-word;
+  }
+
+  .userP-container th{
+    color:white;
   }
 
   .allbooks-header {
@@ -133,6 +151,7 @@ li{
   .small-img{
     width: 70px;
     height: 70px;
+    padding: 3px;
   }
 
   .allbook-table {
@@ -149,7 +168,7 @@ li{
     background: rgba(122, 103, 66, 0.534); 
     color: white; 
     font-weight: bold; 
-    padding: 3px;
+    padding: 0px;
   }
   
   th, td{
@@ -159,14 +178,15 @@ li{
   }
 
   .userProfile-header{
-    text-align: left;
-    color: rgb(119,242,245);
+    text-align: center;
+    color: white;
     padding-bottom: 30px;
     font-style: italic;
+    font-weight: bold;
   }
   
   .userProfile-title {
-    color: rgb(119,242,245);
+    color: whitesmoke;
     font-size: 25px;
     padding-bottom: 20px;
     text-decoration: underline;
@@ -178,7 +198,7 @@ li{
     text-align: center;
     width: 100%;
     color: rgb(209, 209, 209);
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .header-nav{

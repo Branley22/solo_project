@@ -33,9 +33,9 @@ const UserProfile = (props)=>{
   },[])
 
   return(
-    <div className="allbook-container">
-      <h1 className="userProfile-header">Good Reads</h1>
+    <div className="userP-container">
         <Header headerText="Go back" headerPath={`/books`}/>
+        <h1 className="userProfile-header">Good Reads</h1>
       <h1 className="userProfile-title">Welcome to {userPage.username}'s Profile!</h1>
 
       <table className="userProfile-table">
