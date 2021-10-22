@@ -1,7 +1,6 @@
 import './App.css';
 import React, {useState} from 'react';
 import {Router} from '@reach/router';
-import Header from './components/Header';
 import AllBooks from './components/AllBooks';
 import CreateBook from './components/CreateBook';
 import OneBook from './components/OneBook';

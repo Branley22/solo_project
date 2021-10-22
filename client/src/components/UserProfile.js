@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {Link, navigate} from '@reach/router';
 import Header from '../components/Header';
 
 const UserProfile = (props)=>{
@@ -56,7 +55,7 @@ const UserProfile = (props)=>{
             <table className="userProfile-table">
               <thead>
                 <tr>
-                <td><img src={book.image} className="small-img"/></td>
+                <td><img src={book.image} className="small-img" alt="specific book"/></td>
                 <td>{book.name}</td>
                 <td>{book.description}</td>
                 <td>{book.categories}</td>

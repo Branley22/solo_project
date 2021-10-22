@@ -1,14 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Link, navigate} from '@reach/router';
-import DeleteBook from './DeleteBook';
+import {Link} from '@reach/router';
 import Header from '../components/Header';
-import UserProfile from '../components/UserProfile';
 
 const AllBooks = (props)=>{
 
-  const [userPage, setUserPage] = useState({});
-  const [currentUserId, setCurrentUserId] = useState("");
+  const [currentUserId] = useState("");
   const [bookList, setBookList] = useState([]);
 
   useEffect(()=>{
@@ -53,7 +50,7 @@ const AllBooks = (props)=>{
                 <thead>
                   <tr>
                     <td>
-                      <img src={book.image} alt="book image" className="small-img"/></td>
+                      <img src={book.image} alt="book from url" className="small-img"/></td>
                     <td>{book.name}</td>
                     <td>
                       <Link to={`/users/profile/${book.user_id?._id}`}><p style={{color:"blue"}}>Added by:{book.user_id?.username}</p></Link>

@@ -1,6 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import {Link, navigate} from '@reach/router';
+import React from 'react';
 
 const Form = (props)=>{
 

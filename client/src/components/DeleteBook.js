@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import axios from 'axios';
-import {Link, navigate} from '@reach/router';
+import {navigate} from '@reach/router';
 
 const DeleteBook = (props)=>{
   const {id, bookList, setBookList} = props;

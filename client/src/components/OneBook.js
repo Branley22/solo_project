@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Link, navigate} from '@reach/router';
 import DeleteBook from './DeleteBook';
 import Header from '../components/Header';
 
@@ -36,7 +35,7 @@ const OneBook = (props)=>{
         </h4>
       </div>
         <div className="one-book">
-          <img src={OneBook.image} alt="image" className="lg-img"/>
+          <img src={OneBook.image} alt="specific book" className="lg-img"/>
           <h3>Description:</h3>
             <p className="one-book-p">{OneBook.description}</p>
           <h3>Rating:</h3>
