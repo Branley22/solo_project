@@ -20,7 +20,7 @@ const Form = (props)=>{
 
   return(
     <div className="editbook">
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className="edit-form">
         
         <div>
           <label htmlFor="">Name:</label>
@@ -82,7 +82,7 @@ const Form = (props)=>{
           }
         </div>
         
-        <button className="submitbtn">{buttonText}</button>
+        <button className="deletebtn">{buttonText}</button>
       </form>
     </div>
   )

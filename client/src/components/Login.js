@@ -37,8 +37,8 @@ const Login = (props)=>{
   }
   return(
     <div className="login-container">
-      <h2>Login</h2>
-      <p className="error-text">{errorMessage? errorMessage : ""}</p>
+      <h2 className="login-title"><span className="title">Login</span></h2>
+      <p className="login-error-text">{errorMessage? errorMessage : ""}</p>
       <form onSubmit={login} className="login-form">
 
         <div>
@@ -59,12 +59,12 @@ const Login = (props)=>{
         </div>
 
         <div className="login-footer">
-              <button className="submitbtn">
+              <button className="loginbtn">
               <Link to="/">
                 Don't have an account?
               </Link>
             </button>
-            <button className="submitbtn"
+            <button className="loginbtn"
             type="submit">
               LOGIN</button>
         </div>

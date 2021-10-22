@@ -22,21 +22,24 @@ const OneBook = (props)=>{
 
 
   return(
-    <div className="login-container">
-      <h1 className="userProfile-header">Good Reads</h1>
-        <Header headerText="Go back" headerPath={`/books`}/>
+    <div className="edit-container">
+      <h1 className="edit-header">Good Reads</h1>
+        <div>
+        <Header headerText="Go back" headerPath={`/books`} />
+        </div>
       <div>
-        <h2>
+        <h4>
           <span>
             Book Name:
           </span>
           {OneBook.name}
-        </h2>
+        </h4>
       </div>
         <div className="one-book">
           <img src={OneBook.image} alt="image" className="lg-img"/>
           <h3>Description:</h3>
             <p className="one-book-p">{OneBook.description}</p>
+          <h3>Rating:</h3>
             <p className="one-book-p">{OneBook.rating}</p>
             <DeleteBook id={OneBook._id}/>
         </div>

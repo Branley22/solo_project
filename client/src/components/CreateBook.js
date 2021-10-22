@@ -43,9 +43,9 @@ const CreateBook = (props)=>{
 
 
   return(
-    <div className="login-container">
-      <h1 className="userProfile-header">Good Reads</h1>
-      <h1 className="userProfile-title" className>New Book</h1>
+    <div className="edit-container">
+      <h1 className="edit-header">Good Reads</h1>
+      <h2 className="edit-title" className>New Book</h2>
       <Form submitHandler={newSubmitHandler}
       buttonText="Add New Book"
       book={newBook} setBook={setNewBook}

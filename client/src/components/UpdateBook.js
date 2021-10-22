@@ -44,9 +44,9 @@ const UpdateBook = (props)=>{
 
   
   return(
-    <div className="login-container">
-      <h1 className="userProfile-header">Good Reads</h1>
-      <h2 className="userProfile-title">Edit/Update Book</h2>
+    <div className="edit-container">
+      <h1 className="edit-header">Good Reads</h1>
+      <h2 className="edit-title">Update Book</h2>
       <Form submitHandler={updateBookHandler}
       buttonText="Update Book"
       book={updateBook} setBook={setUpdateBook}

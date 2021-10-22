@@ -29,7 +29,7 @@ const DeleteBook = (props)=>{
 
   return(
     <div>
-      <button className="submitbtn" onClick={deleteHandler}>Check out</button>
+      <button className="deletebtn" onClick={deleteHandler}>Check out</button>
     </div>
   )
 }

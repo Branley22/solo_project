@@ -33,10 +33,10 @@ const Header = (props)=>{
   return(
     <div>
       <ul className="header-nav">
-        <Link style={{color:"white", fontStyle:"900"}} to={headerPath}>{headerText}</Link>
+        <Link style={{color:"black", fontStyle:"900", display:"flex"}} to={headerPath}>{headerText}</Link>
         {
           currentUserId?
-          <Link to={`/users/profile/${currentUserId}`}><li style={{color:"white", fontWeight:"bold"}}> Your Profile</li></Link>
+          <Link to={`/users/profile/${currentUserId}`}><li style={{color:"black"}}> Your Profile</li></Link>
           :null
         }
         <button className="logout-link" onClick={logout}>Logout</button>

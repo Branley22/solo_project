@@ -51,12 +51,7 @@ const Register = (props)=>{
 
   return(
     <div className="login-container">
-      <h2>Register</h2>
-        <h4>
-          <Link to="/login" style={{color:"white", fontWeight:"bold", opacity:".80"}}>
-            Back to login
-          </Link>
-        </h4>
+      <h2 className="login-title"><span className="title">Register</span></h2>
       <form onSubmit={register} className="register-form">
         {
           confirmReg?
@@ -75,7 +70,7 @@ const Register = (props)=>{
 
         <div>
           <label>Email:</label>
-          <input type="email" name="email" value={user.email} onChange={(e)=>handleChange(e)}/>
+          <input type="email" name="email" value={user.email} onChange={(e)=>handleChange(e)}/><br/>
           {
             Errors.email?
             <span className="errors-text">{Errors.email.message}</span>
@@ -102,7 +97,12 @@ const Register = (props)=>{
             :null
           }
         </div>
-        <button className="submitbtn" type="submit">Register Me</button>
+        <button className="loginbtn">
+          <Link to="/login">
+            Back to login
+          </Link>
+        </button>
+        <button className="loginbtn" type="submit">Register Me</button>
       </form>
     </div>
   )
