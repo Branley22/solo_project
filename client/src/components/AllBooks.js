@@ -22,10 +22,10 @@ const AllBooks = (props)=>{
   return(
     <div>
       <div className="allbook-container">
-        <div className="allbooks-header">
+        <header>
           <h1 className="allbooks-title">Good Reads</h1>
           <Header headerText="" headerPath={`/users/profile/${currentUserId}`}/>
-        </div>
+        </header>
         <p className="add-new-book-p">
           <Link to={`/books/new/`} style={{color:"black", fontWeight:"bold"}}>
             Add new book

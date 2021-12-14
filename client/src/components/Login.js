@@ -36,10 +36,11 @@ const Login = (props)=>{
   }
   return(
     <div className="login-container">
-      <h2 className="login-title"><span className="title">Login</span></h2>
-      <p className="login-error-text">{errorMessage? errorMessage : ""}</p>
-      <form onSubmit={login} className="login-form">
+      <h2 className="login-title">
+        <span className="title">Login</span>
+      </h2>
 
+      <form onSubmit={login} className="login-form">
         <div>
           <label>Email Address:</label>
           <input
@@ -48,7 +49,6 @@ const Login = (props)=>{
             value={email} onChange={(e)=> setEmail(e.target.value)}
             placeholder="Example@gmail.com"/>
         </div>
-
         <div>
           <label>Password:</label>
           <input
@@ -57,15 +57,18 @@ const Login = (props)=>{
           value={password.password} onChange={(e)=> setPassword(e.target.value)}/>
         </div>
 
+        <p className="login-error-text">{errorMessage? errorMessage : ""}</p>
+
         <div className="login-footer">
-              <button className="loginbtn">
-              <Link to="/">
-                Don't have an account?
-              </Link>
-            </button>
-            <button className="loginbtn"
+          <button className="loginbtn">
+          <Link to="/">
+            Don't have an account?
+          </Link>
+          </button>
+          <button className="loginbtn"
             type="submit">
-              LOGIN</button>
+            LOGIN
+          </button>
         </div>
       </form>
     </div>
