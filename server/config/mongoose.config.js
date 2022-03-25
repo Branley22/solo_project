@@ -1,4 +1,4 @@
-const database = require("mime-db");
+// const database = require("mime-db");
 const mongoose = require("mongoose");
 const dbName = "books";
 
